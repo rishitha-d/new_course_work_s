@@ -3,10 +3,7 @@
 using namespace std;
 
 int main(){
-
-
-
-int x = 1;
+int x = 10;
 
 // addresss of x = &x
 
@@ -14,12 +11,19 @@ int x = 1;
 
 //dereferencing the pointer *ptr = value at that address
 
-int *ptr = &x;
+int* ptr = &x;
 
-cout<<&x<<endl;
-cout<<ptr<<endl;  //061ff08
-cout<<*ptr<<endl; //1
+int** parPtr = &ptr;
 
-int* n = NULL ;
-cout << n <<endl ; //0
+cout<<"value of x : "<<x<<endl;
+cout<<"address of x: "<<&x<<endl;
+cout<<"address of x using pointers: "<<ptr<<endl;
+cout<<"dereferencing ptr :"<<*ptr<<endl;
+cout<<"address of ptr: "<<&ptr<<endl;
+cout<<"address using parent pointer: "<<parPtr<<endl;
+cout<<"dereferencing parent pointer: "<<**parPtr<<endl;
+
+return 0;
+
+
 }
